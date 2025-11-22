@@ -86,8 +86,8 @@ export function AdminDashboard() {
                         Записи цього тижня
                     </h2>
 
-                    <div className="h-64 w-full">
-                        <ResponsiveContainer width="100%" height="100%">
+                    <div style={{ width: '100%', height: 300 }}>
+                        <ResponsiveContainer>
                             <BarChart data={stats}>
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis dataKey="name" />
