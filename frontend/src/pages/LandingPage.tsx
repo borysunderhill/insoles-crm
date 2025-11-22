@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Star, ShieldCheck, Clock } from 'lucide-react';
+import { ArrowRight, Star, ShieldCheck, Clock } from 'lucide-react';
 
 export function LandingPage() {
     return (

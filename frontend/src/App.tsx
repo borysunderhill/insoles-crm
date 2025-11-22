@@ -6,6 +6,9 @@ import { MarketingPage } from './pages/MarketingPage';
 
 import { LandingPage } from './pages/LandingPage';
 
+import { LoginPage } from './pages/LoginPage';
+import { RequireAuth } from './components/RequireAuth';
+
 function App() {
   return (
     <BrowserRouter>
@@ -13,8 +16,19 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<LandingPage />} />
           <Route path="booking" element={<BookingPage />} />
-          <Route path="admin" element={<AdminDashboard />} />
-          <Route path="marketing" element={<MarketingPage />} />
+          <Route path="login" element={<LoginPage />} />
+
+          <Route path="admin" element={
+            <RequireAuth>
+              <AdminDashboard />
+            </RequireAuth>
+          } />
+
+          <Route path="marketing" element={
+            <RequireAuth>
+              <MarketingPage />
+            </RequireAuth>
+          } />
         </Route>
       </Routes>
     </BrowserRouter>
