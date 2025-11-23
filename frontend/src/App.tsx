@@ -3,6 +3,7 @@ import { Layout } from './components/Layout';
 import { BookingPage } from './pages/BookingPage';
 import { AdminDashboard } from './pages/AdminDashboard';
 import { MarketingPage } from './pages/MarketingPage';
+import { ClientDashboard } from './pages/ClientDashboard';
 
 import { LandingPage } from './pages/LandingPage';
 
@@ -27,6 +28,12 @@ function App() {
           <Route path="marketing" element={
             <RequireAuth>
               <MarketingPage />
+            </RequireAuth>
+          } />
+
+          <Route path="client-dashboard" element={
+            <RequireAuth>
+              <ClientDashboard />
             </RequireAuth>
           } />
         </Route>
